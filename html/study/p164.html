@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프런트엔드 개발자 지원서</title>
+    <style>
+        div {
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        dt {
+            font-weight: 700;
+            margin: 20px 0px;
+        }
+
+        label.info {
+            width: 50px;
+            display: inline-block;
+            text-align: center;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>프런트엔드 개발자 지원서</h1>
+
+        <p>HTML, CSS, 자바스크립트의 기술을 이해하고 실무 경험이 있는 분을 찾습니다.</p>
+        <hr>
+        <form action="#" method="post">
+            <dl>
+                <dt>개인정보</dt>
+                <dd>
+                    <label for="name" class="info">이 름</label>
+                    <input type="text" name="name" id="name" placeholder="공백 없이 입력하세요">
+                </dd>
+                <dd>
+                    <label for="tel" class="info">연락처</label>
+                    <input type="tel" name="tel" id="tel">
+                </dd>
+                <dt>지원 분야</dt>
+                <dd>
+                    <input type="radio" name="web_publishing" id="web_publishing">
+                    <label for="web_publishing">웹 퍼블리싱</label>
+                </dd>
+                <dd>
+                    <input type="radio" name="web_app_dev" id="web_app_dev">
+                    <label for="web_app_dev">웹 애플리케이션 개발</label>
+                </dd>
+                <dd>
+                    <input type="radio" name="imp_dev_eniv" id="imp_dev_eniv">
+                    <label for="imp_dev_eniv">개발 환경 개선</label>
+                </dd>
+                <dt>지원 동기</dt>
+
+                <textarea name="motive" id="motive" cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea>
+                <br>
+                <button type="submit">접수하기</button>
+                <button type="reset">다시쓰기</button>
+            </dl>
+        </form>
+    </div>
+</body>
+
+</html>
