@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/4cc4112b6b.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        nav {
+            color: blue;
+            width: 80%;
+            margin: 0 auto;
+            border: 1px dotted black;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        ul li {
+            padding: 0 10px;
+        }
+
+        div.nav_logo {
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            align-items: baseline;
+        }
+
+        div.nav_logo :hover {
+            background-color: grey;
+        }
+
+        div.nav_logo i {
+            color: orange;
+            font-size: 32px;
+            margin-right: 5px;
+        }
+
+        ul :hover {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav_logo">
+            <span>
+                <a href="#"><i class="fa-solid fa-person-snowboarding"></i></a>
+                <a href="#">WEB CODING</a>
+            </span>
+        </div>
+        <ul class="nav_menu">
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">메뉴5</a></li>
+        </ul>
+
+        <ul class="nav_icons">
+            <li><a href="#"><i class="fa-solid fa-rocket"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-shuttle-space"></i></a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
