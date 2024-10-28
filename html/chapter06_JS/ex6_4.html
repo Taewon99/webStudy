@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function randomFood() {
+            let priceObj = document.getElementById("price");
+
+            let price = window.parseInt(priceObj.value);
+
+            if (price < 1200) {
+                window.alert(`${price} 가격으로는 주문 불가입니다.`);
+                return;
+            }
+            let count = Math.floor(price / 1200);
+            let total = count * 1200;
+            let change = price - total;
+
+            for (let i = 0; i < count; i++) {
+                let no = Math.floor(Math.random() * (3 - 1 + 1) + 1);
+                document.write(`${i + 1}번음식: <img src="./media/food${no}.png" width="100px">`);
+            }
+            document.write("<hr>");
+            document.write(`<p>총액: ${total} 잔액: ${change} </p>`)
+            window.console.log("count", count);
+        }
+    </script>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <p>음식 1개당 1200원입니다. 주문하고 싶은 금액을 입력해주세요.</p>
+        <label for="price">금액입력</label>
+        <input type="number" name="price" id="price" max="100000" min="1000">
+        <button type="button" onclick="randomFood();">order</button>
+
+    </form>
+</body>
+
+</html>
