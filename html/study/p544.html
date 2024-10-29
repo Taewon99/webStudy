@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상세 설명</title>
+    <style>
+        body {
+            position: relative;
+            width: 380px;
+            height: fit-content;
+        }
+
+        .open {
+            position: absolute;
+            left: 15px;
+            top: 330px;
+            background-color: rgba(255, 255, 255, 0.63);
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .close {
+            position: absolute;
+            left: 15px;
+            background-color: white;
+            border: 1px solid lightgray;
+        }
+
+        .detail {
+            display: none;
+        }
+    </style>
+    <script>
+        function openDetail() {
+            document.getElementsByClassName("open")[0].style.display = "none";
+            document.getElementsByClassName("detail")[0].style.display = "inline-block";
+        }
+        function closeDetail() {
+            document.getElementsByClassName("open")[0].style.display = "block";
+            document.getElementsByClassName("detail")[0].style.display = "none";
+        }
+    </script>
+</head>
+
+<body>
+    <img src="../../../NaverWebProject/naver_blog/img/경복궁이미지.jpg" alt="경복궁 이미지">
+    <button type="button" class="open" onclick="openDetail()">상세 설명 보기</button>
+    <div class="detail">
+        <h2>등심붓꽃</h2>
+        <p>북아메리카 원산으로 각지에서 관상초로 흔히 심고 있는 귀화식물이다. 길가나 잔디밭에서 흔히 볼 수 있다. 아주 작은 씨앗을 무수히 많이 가지고 있는데 바람을 이용해 씨앗들을 날려보내거나,
+            뿌리줄기를 통해 동일한 개체들을 많이 만들어 냄으로써 번식한다.
+        </p>
+        <button type="button" class="close" onclick="closeDetail()">상세 설명 닫기</button>
+    </div>
+
+</body>
+
+</html>
