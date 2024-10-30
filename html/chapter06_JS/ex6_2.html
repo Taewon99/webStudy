@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let count = 0;
+        function colorChange() {
+            // html ui객체를 가져오기
+            let h1obj = window.document.getElementById("change");
+            count++;
+            if (count % 2 === 0) {
+                h1obj.style.backgroundColor = "red";
+                h1obj.style.color = "white";
+            } else {
+                h1obj.style.backgroundColor = "blue";
+                h1obj.style.color = "black";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="change" onclick="colorChange();">Change Colors</h1>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌석배치도</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid lightgray;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        let totalNo, rowNo, colNo, seatNo;
+        totalNo = window.parseInt(window.prompt("입장객은 몇명인가요?"));
+        colNo = window.parseInt(window.prompt("한 줄에 몇 명씩 앉습니까?"));
+        rowNo = Math.floor(totalNo / colNo) + 1;
+
+        document.write("<h1>자리 배치도</h1>");
+        document.write(`<table>`);
+        for (i = 0; i <= rowNo; i++) {
+            document.write("<tr>");
+            for (j = 1; j <= colNo; j++) {
+                seatNo = i * colNo + j;
+                if (seatNo > totalNo) {
+                    break;
+                }
+                document.write(`<td> 좌석 ${seatNo} </td>`);
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

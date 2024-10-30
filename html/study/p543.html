@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        li a {
+            text-decoration-line: none;
+            color: black;
+            border: 1px solid lightgrey;
+            padding: 8px 60px;
+            margin: 5px;
+        }
+
+        div#result {
+            width: 600px;
+            height: 300px;
+            border: 1px solid lightgrey;
+        }
+    </style>
+    <script>
+        function change_backColor(color) {
+            let target = document.getElementById("result");
+
+            target.style.backgroundColor = color;
+        }
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#" onclick="change_backColor('green')">Green</a></li>
+        <li><a href="#" onclick="change_backColor('orange')">Orange</a></li>
+        <li><a href="#" onclick="change_backColor('purple')">Purple</a></li>
+    </ul>
+    <div id="result"></div>
+</body>
+
+</html>
