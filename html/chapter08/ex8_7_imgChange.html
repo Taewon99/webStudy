@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        aside {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        div.banner {
+            width: 150px;
+            height: 150px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+    </style>
+    <script>
+        function onload() {
+            //객체 찾기
+            const img = document.querySelector('img');
+            const btn = document.querySelector('button');
+
+            //이벤트 리스너 등록
+            btn.addEventListener("click", imgChange);
+
+            function imgChange() {
+                let num = Math.floor(Math.random() * (3) + 1);
+                let srcData = `./media/food${num}.png`;
+                img.src = srcData;
+            }
+
+            setInterval(imgChange, 3000);
+        }
+    </script>
+</head>
+
+<body onload="onload();">
+    <aside>
+        <div class="banner">
+            <a href="#"><img src="./media/food1.png" alt=""></a> <br>
+            <button type="button">change</button>
+        </div>
+    </aside>
+</body>
+
+</html>
