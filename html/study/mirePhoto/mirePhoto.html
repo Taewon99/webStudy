@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIRE PHOTO</title>
+    <link rel="stylesheet" href="./mirePhoto.css">
+    <script src="./mirePhoto.js"></script>
+    <script src="https://kit.fontawesome.com/4cc4112b6b.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="carousel();">
+    <header>
+        <a href="#" target="_self"><i class="fa-solid fa-camera-retro"></i> MIRE PHOTO</a>
+        <ul class="menu">
+            <li><a href="#" target="_self">menu</a></li>
+            <li><a href="#" target="_self">menu</a></li>
+            <li><a href="#" target="_self">menu</a></li>
+            <li><a href="#" target="_self">menu</a></li>
+        </ul>
+        <div class="sns">
+            <a href="#" target="_self"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" target="_self"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </header>
+    <div class="carousel">
+        <div class="slides">
+            <a href="#"><img src="./img/korea1.jpg" alt=""></a>
+            <a href="#"><img src="./img/korea2.jpg" alt=""></a>
+            <a href="#"><img src="./img/korea3.jpg" alt=""></a>
+            <a href="#"><img src="./img/korea4.jpg" alt=""></a>
+        </div>
+        <div class="slideshow_nav">
+            <a href="#" class="prev"><i class="fa-solid fa-circle-chevron-left"></i></a>
+            <a href="#" class="next"><i class="fa-solid fa-circle-chevron-right"></i></a>
+        </div>
+        <div class="slideshow_indicator">
+            <a href="#" class="active"><i class="fa-solid fa-circle"></i></i></a>
+            <a href="#"><i class="fa-solid fa-circle"></i></i></a>
+            <a href="#"><i class="fa-solid fa-circle"></i></i></a>
+            <a href="#"><i class="fa-solid fa-circle"></i></i></a>
+        </div>
+    </div>
+    <main>
+        <nav>
+            <p>NAV</p>
+        </nav>
+        <section>
+            <p>MIRE PICTURE</p>
+
+            <form class="account_info" action="">
+
+                <label for="id">아이디</label>
+                <input type="text" name="id" id="id">
+                <label for="pwd">비밀번호</label>
+                <input type="password" name="pwd" id="pwd">
+                <label for="re_pwd">비밀번호 재확인</label>
+                <input type="password" name="re_pwd" id="re_pwd">
+                <label for="name">이름</label>
+                <input type="text" name="name" id="name">
+                <label for="birth_year">생년월일</label>
+                <div class="birth">
+                    <input type="text" name="birth_year" id="birth_year" placeholder="년">
+                    <select name="birt_month" id="birt_month" list="month">
+                        <datalist id="month">
+                            <option value="0">월</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </datalist>
+                    </select>
+                    <input type="text" name="birth_day" id="birth_day" placeholder="일">
+                </div>
+                <label for="gender">성별</label>
+                <select name="gender" id="gender" list="gender_list">
+                    <datalist id="gender_list">
+                        <option value="0">성별</option>
+                        <option value="1">남</option>
+                        <option value="2">여</option>
+                    </datalist>
+                </select>
+                <label for="confirm_mail">본인 확인 이메일 <span>(선택)</span></label>
+                <input type="email" name="confirm_mail" id="confirm_mail" placeholder="선택입력">
+                <label for="country_num">휴대전화</label>
+                <select name="country_num" id="country_num" list="country_num_list">
+                    <datalist id="country_num_list">
+                        <option value="+82">대한민국 +82</option>
+                        <option value="+1">미국 +1</option>
+                    </datalist>
+                </select>
+                <div class="prove_num">
+                    <input type="tel" name="confirm_mail" id="confirm_mail" placeholder="전화번호 입력">
+                    <button type="submit">인증번호 받기</button>
+                </div>
+                <input type="text" name="num_check" id="num_check" placeholder="인증번호를 입력하세요">
+                <button>가입하기</button>
+            </form>
+        </section>
+        <aside>
+            <p>ASIDE</p>
+        </aside>
+    </main>
+    <footer>
+        <p>FOOTER</p>
+    </footer>
+
+</body>
+
+</html>
