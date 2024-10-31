@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+            width: 300px;
+        }
+    </style>
+    <script>
+        function onLoad() {
+            //변수
+            let count = 0;
+            let flag = false;
+            //객체찾기
+            const divobj = document.querySelector("div");
+            const btnobj = document.querySelector("button");
+
+            //테이블추가
+            const table = document.createElement("table");
+            table.style.border = "1px solid black";
+            table.style.borderCollapse = "collapse";
+            table.style.margin = "0 auto";
+            divobj.appendChild(table);
+
+            //이벤트리스너와 핸들러등록
+            btnobj.addEventListener("click", () => {
+                //열을만든다. 셀을만든다. 셀내용만든다. 테이블에 추가한다.
+                const row = table.insertRow(count);
+                row.style.border = "1px solid black";
+                const td0 = row.insertCell(0);
+                td0.style.border = "1px solid black";
+                const td1 = row.insertCell(1);
+                td1.style.border = "1px solid black";
+                if (flag === false) {
+                    td0.textContent = `원래셀`;
+                    td1.textContent = `원래셀`;
+                    flag = true;
+                } else {
+                    td0.textContent = `추가셀 ${count}`;
+                    td1.textContent = `추가셀 ${count}`;
+                }
+                count++;
+            });
+        }
+    </script>
+</head>
+
+<body onload="onLoad(); ">
+    <div>
+
+    </div>
+    <hr>
+    <button>열추가</button>
+
+</body>
+
+</html>
