@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>현재페이지는 location 객체를 태스팅하는 화면입니다.</h1>
+    <script>
+        const siteArray = new Array();
+        let win = null;
+        siteArray[0] = "https://www.naver.com"
+        siteArray[1] = "https://www.nate.com"
+        siteArray[2] = "https://www.daum.net"
+
+        let count = 0;
+        const timerID = setInterval(() => {
+            if (win !== null) {
+                win.close();
+            }
+            count++
+            win = window.open(siteArray[count % 3], "_blank", "width=400, height=400, left=100, top=100");
+            if (count > 10) {
+                clearInterval(timerID);
+            }
+        }, 2000);
+    </script>
+</body>
+
+</html>
