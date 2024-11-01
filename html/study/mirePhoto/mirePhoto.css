@@ -28,6 +28,14 @@ ul.menu {
   display: flex;
   justify-content: space-between;
 }
+ul.menu li {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+ul.menu li div {
+  position: absolute;
+}
 header i,
 header a {
   font-size: large;
@@ -136,7 +144,7 @@ section > p {
   justify-content: center;
 }
 .account_info label {
-  width: 700px;
+  width: 95%;
   align-self: center;
   margin: 2px;
 }
